@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+  <title>MCU Studio — Gemini Style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true">
+    <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </symbol>
+    <symbol id="ic-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 18-6-6 6-6" />
+    </symbol>
+    <symbol id="ic-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6" />
+    </symbol>
+    <symbol id="ic-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" />
+      <circle cx="12" cy="13" r="3.5" />
+    </symbol>
+    <symbol id="ic-send" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M3.4 20.4 21.85 12 3.4 3.6l.01 6.66L16.5 12 3.41 13.74z" />
+    </symbol>
+    <symbol id="ic-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="7.5" cy="15.5" r="4.5" />
+      <path d="m10.7 12.3 8.3-8.3M16 7l2 2M19 4l2 2" />
+    </symbol>
+    <symbol id="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="11" height="11" rx="2" />
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6 9 17l-5-5" />
+    </symbol>
+    <symbol id="ic-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+    </symbol>
+    <symbol id="ic-cable" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22v-5M9 8V2M15 8V2M7 8h10v4a5 5 0 0 1-10 0V8Z" />
+    </symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
+    <symbol id="ic-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 6h18M8 6V4h8v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6" />
+    </symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.35-4.35" />
+    </symbol>
+    <symbol id="ic-spark" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2 14.8 9.2 22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8L12 2Z" />
+    </symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </symbol>
+    <symbol id="ic-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+    </symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+  </svg>
+
+  <div id="appRoot" class="gemini-app">
+    <header class="top-bar">
+      <div class="top-left">
+        <button id="menuBtn" type="button" class="icon-btn" aria-label="เปิดเมนู">
+          <svg class="ico"><use href="#ic-menu" /></svg>
+        </button>
+        <div class="brand-wrap">
+          <span class="brand-name">MCU Studio</span>
+          <button id="quickBoardBtn" type="button" class="board-chip" title="เปลี่ยนรุ่นบอร์ด">
+            <span id="currentBoardLabel">ESP32 DevKit (30/38 pin)</span>
+            <svg class="ico-xs"><use href="#ic-chevron-down" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="top-right">
+        <span id="keyDot" class="key-pill missing">No Key</span>
+        <button id="openKeySheetBtn" type="button" class="ghost-pill" title="ใส่ API Key ชั่วคราว">
+          <svg class="ico-xs"><use href="#ic-key" /></svg>
+          <span>API Key</span>
+        </button>
+        <button id="newChatBtn" type="button" class="icon-btn" aria-label="แชทใหม่" title="แชทใหม่">
+          <svg class="ico"><use href="#ic-plus" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="chatView" class="view active">
+      <div id="messages" class="messages"></div>
+
+      <div id="imagePreviewBar" class="attachment-bar hidden">
+        <div class="attachment-info">
+          <img id="imagePreview" alt="รูปที่แนบ" />
+          <span class="attachment-label">แนบรูปพร้อมส่ง</span>
+        </div>
+        <button type="button" id="removeImageBtn" class="chip-action">
+          <svg class="ico-xs"><use href="#ic-close" /></svg>
+          <span>นำออก</span>
+        </button>
+      </div>
+
+      <div class="composer-wrap">
+        <form id="chatForm" class="composer-pill">
+          <label for="cameraInput" class="tool-btn" aria-label="ถ่ายรูปหรือเลือกรูป" title="ถ่ายรูปหรือเลือกรูป">
+            <svg class="ico"><use href="#ic-camera" /></svg>
+          </label>
+          <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden />
+
+          <textarea
+            id="promptInput"
+            rows="1"
+            placeholder="พิมพ์คำสั่ง วางโค้ด หรือถามเรื่องบอร์ด..."
+            aria-label="พิมพ์ข้อความ"
+          ></textarea>
+
+          <button id="sendBtn" type="submit" class="send-btn" aria-label="ส่งข้อความ" title="ส่ง">
+            <svg class="ico-sm"><use href="#ic-send" /></svg>
+          </button>
+        </form>
+        <p class="composer-disclaimer">API Key ใช้ชั่วคราวในหน้านี้เท่านั้น ไม่บันทึกลงหน่วยความจำถาวร • ตรวจขาและไฟเลี้ยงก่อนจ่ายไฟจริง</p>
+      </div>
+    </main>
+
+    <section id="pinsView" class="view subview">
+      <div class="subview-header">
+        <button type="button" class="icon-btn back-btn" aria-label="กลับ">
+          <svg class="ico"><use href="#ic-back" /></svg>
+        </button>
+        <h2>Pin &amp; Wiring</h2>
+      </div>
+      <div class="subview-body">
+        <div class="surface-card">
+          <h3>ขาที่ใช้ไปแล้วในโปรเจกต์</h3>
+          <div class="pin-grid">
+            <input id="pinNameInput" type="text" class="dark-input" placeholder="ขา เช่น GPIO 21/22 หรือ D1" />
+            <input id="pinUsageInput" type="text" class="dark-input" placeholder="หน้าที่ เช่น I2C BME280" />
+            <button id="addPinBtn" type="button" class="pill-btn primary">
+              <svg class="ico-xs"><use href="#ic-plus" /></svg>
+              <span>บันทึก</span>
+            </button>
+          </div>
+          <ul id="pinList" class="clean-list"></ul>
+        </div>
+
+        <div class="surface-card">
+          <h3>คำแนะนำการต่อสายที่เซฟไว้</h3>
+          <div id="savedWiringList" class="stack-gap"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="snippetsView" class="view subview">
+      <div class="subview-header">
+        <button type="button" class="icon-btn back-btn" aria-label="กลับ">
+          <svg class="ico"><use href="#ic-back" /></svg>
+        </button>
+        <h2>Snippets &amp; Fixes</h2>
+      </div>
+      <div class="subview-body">
+        <div class="search-wrap">
+          <svg class="ico-sm search-ico"><use href="#ic-search" /></svg>
+          <input id="snippetSearchInput" type="text" class="dark-input search-input-pad" placeholder="ค้นหาโค้ด รุ่นบอร์ด หรือคำอธิบาย..." />
+        </div>
+        <div id="snippetList" class="stack-gap"></div>
+      </div>
+    </section>
+
+    <section id="historyView" class="view subview">
+      <div class="subview-header">
+        <button type="button" class="icon-btn back-btn" aria-label="กลับ">
+          <svg class="ico"><use href="#ic-back" /></svg>
+        </button>
+        <h2>ประวัติแชท</h2>
+      </div>
+      <div class="subview-body">
+        <div id="historyList" class="stack-gap"></div>
+      </div>
+    </section>
+
+    <div id="keySheetBackdrop" class="backdrop hidden"></div>
+    <section id="keySheet" class="bottom-sheet hidden" aria-label="ตั้งค่า API Key ชั่วคราว">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3>API Key &amp; Model (ชั่วคราว)</h3>
+        <button id="closeKeySheetBtn" type="button" class="chip-action">เสร็จสิ้น</button>
+      </div>
+      <p class="sheet-note">คีย์เก็บไว้ในหน่วยความจำชั่วคราวของหน้านี้เท่านั้น เมื่อปิดหรือรีเฟรชหน้าจะถูกล้างและต้องวางใหม่ทุกครั้ง</p>
+
+      <div class="form-row-2">
+        <div>
+          <label class="field-label" for="providerSelect">ผู้ให้บริการ</label>
+          <select id="providerSelect" class="dark-input">
+            <option value="groq">Groq</option>
+            <option value="openrouter">OpenRouter</option>
+            <option value="openai">OpenAI</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="together">Together</option>
+            <option value="gemini_openai">Gemini (OpenAI compat)</option>
+            <option value="custom">Custom URL</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="modelInput">Model ID</label>
+          <input id="modelInput" type="text" class="dark-input" value="qwen/qwen3.8-27b" placeholder="เช่น qwen/qwen3.8-27b" />
+        </div>
+      </div>
+
+      <div id="customUrlRow" class="hidden">
+        <label class="field-label" for="customBaseUrlInput">Custom Base URL</label>
+        <input id="customBaseUrlInput" type="text" class="dark-input" placeholder="https://.../v1 หรือ http://localhost:11434/v1" />
+      </div>
+
+      <div>
+        <label class="field-label" for="apiKeyInput">API Key (ไม่บันทึกถาวร)</label>
+        <div class="key-input-group">
+          <input id="apiKeyInput" type="password" class="dark-input" placeholder="วาง API Key ที่นี่..." autocomplete="off" />
+          <button id="toggleKeyVisBtn" type="button" class="chip-action" aria-label="ดูหรือซ่อนคีย์">
+            <svg class="ico-xs"><use href="#ic-eye" /></svg>
+          </button>
+          <button id="clearKeyBtn" type="button" class="chip-action" aria-label="ล้างคีย์">
+            <svg class="ico-xs"><use href="#ic-trash" /></svg>
+            <span>ล้าง</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="drawerBackdrop" class="backdrop hidden"></div>
+    <aside id="drawer" class="drawer" aria-label="เมนูนำทาง">
+      <div class="drawer-top">
+        <span class="drawer-title">MCU Studio</span>
+        <button id="closeDrawerBtn" type="button" class="icon-btn" aria-label="ปิดเมนู">
+          <svg class="ico"><use href="#ic-close" /></svg>
+        </button>
+      </div>
+
+      <button id="drawerNewChatBtn" type="button" class="drawer-new-chat">
+        <svg class="ico-sm"><use href="#ic-plus" /></svg>
+        <span>แชทใหม่</span>
+      </button>
+
+      <div class="drawer-block">
+        <label class="field-label" for="boardFamilySelect">กลุ่มบอร์ด</label>
+        <select id="boardFamilySelect" class="dark-input">
+          <option value="ESP32">ESP32 (ทุกรุ่น / รุ่นย่อย)</option>
+          <option value="ESP8266">ESP8266 (ทุกรุ่น / รุ่นย่อย)</option>
+          <option value="Arduino">Arduino (ทุกรุ่น / รุ่นย่อย)</option>
+        </select>
+
+        <label class="field-label mt-8" for="boardModelSelect">รุ่น / รุ่นย่อยเฉพาะ</label>
+        <select id="boardModelSelect" class="dark-input"></select>
+
+        <label class="field-label mt-8" for="reasoningSelect">Reasoning Effort (Groq Qwen 3.8)</label>
+        <select id="reasoningSelect" class="dark-input">
+          <option value="none">none — เร็วสุด / ประหยัด token</option>
+          <option value="low" selected>low — สมดุล ไวและแม่นยำ</option>
+          <option value="medium">medium — วิเคราะห์บัค/วงจรลึกขึ้น</option>
+          <option value="high">high — คิดละเอียดสูงสุด</option>
+        </select>
+      </div>
+
+      <div class="drawer-block">
+        <label class="field-label" for="projectNoteInput">โน้ตโปรเจกต์ / เงื่อนไขขา</label>
+        <textarea id="projectNoteInput" rows="3" class="dark-input" placeholder="เช่น ไฟ 3.3V, GPIO 2 ต่อ LED..."></textarea>
+      </div>
+
+      <nav class="drawer-nav">
+        <button type="button" class="nav-link active" data-view="chatView">
+          <svg class="ico-sm"><use href="#ic-chat" /></svg>
+          <span>แชทปัจจุบัน</span>
+        </button>
+        <button type="button" class="nav-link" data-view="pinsView">
+          <svg class="ico-sm"><use href="#ic-cable" /></svg>
+          <span>Pin &amp; Wiring</span>
+        </button>
+        <button type="button" class="nav-link" data-view="snippetsView">
+          <svg class="ico-sm"><use href="#ic-code" /></svg>
+          <span>Snippets &amp; Fixes</span>
+        </button>
+        <button type="button" class="nav-link" data-view="historyView">
+          <svg class="ico-sm"><use href="#ic-clock" /></svg>
+          <span>ประวัติแชท</span>
+        </button>
+      </nav>
+
+      <div class="drawer-recents">
+        <div class="recents-label">แชทล่าสุด</div>
+        <div id="drawerRecentList" class="recents-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
